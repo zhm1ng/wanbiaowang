@@ -1,0 +1,169 @@
+@import "public";
+
+// banner
+
+.container{
+    width:100%;
+    height:432px;
+    position:relative;
+    overflow:hidden;
+    ul li{
+        display:block;
+        img{
+        width:100%;
+        height:432px;
+        // transition: all 0.6s;
+        }
+        // img:hover{
+        //     transform: scale(1.4);
+        // }
+    }
+    ol{
+        display:flex;
+        position:absolute;
+        left:50%;
+        bottom:13px;
+        -webkit-transform:translateX(-50%);
+        z-index:2;
+        li{
+        width:19px;
+        height:2px;
+        background:#fff;
+        opacity:0.5;
+        margin:0 4px;
+        }
+    }
+    span{
+    width: 30px;
+    height: 90px;
+    line-height: 90px;
+    // background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    position: absolute;
+
+    top: 50%;
+    left: 254px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform:translateY(-50%);
+    display:none;
+    }
+    #ltBnt{
+    background:url(../img/a.png) no-repeat -304px -76px;
+    }
+    #rtBtn{
+    background:url(../img/a.png) no-repeat -372px 0;
+    right: 10px;
+    left: auto;
+    }
+    #ltBnt:hover{
+        background:url(../img/a.png) no-repeat -372px -100px;
+    }
+    #rtBtn:hover{
+        background:url(../img/a.png) no-repeat -304px -176px;
+    }
+
+    #bannernav{
+        position:absolute;
+        left:32px;
+        top:0;
+        display:block;
+        li{
+            width:219px;
+            height:54px;
+            line-height:52px;
+            // border-bottom:1px solid #333;
+            a{
+                font-size:10px;
+                font-weight:bold;
+                color:#fff;
+                margin-left:12px;
+            }
+        }
+        li:nth-child(odd){
+            background:#402d2d ;
+        }
+        li:not(:nth-child(odd)){
+            background:#332424;
+        }
+        li:hover{
+            background:#fff;
+            a{
+              color:#000;
+            }
+        }
+    }
+    #twonav{
+        position:absolute;
+        left:251px;
+        top:0;
+        width:790px;
+        height:432px;
+        background:#fff;
+        z-index:10;
+        border-top:2px solid #000;
+        display:none;
+    }
+}
+
+// 广告图下面的标签
+.banbottom{
+    width:100%;
+    height:56px;
+    border-bottom:1px solid #e5e5e5;
+    ul{
+        margin:0px 32px;
+        display:flex;
+        justify-content:space-around;
+        color:#666679;
+        font-size:18px;
+        line-height:56px;
+        li{
+        width:295px;
+        height:56px;
+        line-height:56px;
+        text-align:center;
+            span{
+                font-size:18px;
+                line-height:22px;
+                margin-right:5px;
+
+                }
+        }
+            li:nth-child(1) span{
+            background:url(../img/a.png) no-repeat -542px -68px;
+            }
+            li:nth-child(2) span{
+            background:url(../img/a.png) no-repeat -542px -34px;
+            }
+            li:nth-child(3) span{
+            background:url(../img/a.png) no-repeat -542px  0px;
+            }
+            li:nth-child(4) span{
+            background:url(../img/a.png) no-repeat -542px -102px;
+            }
+    }
+
+}
+
+// 小广告图
+.small-ban{
+    width:100%;
+    margin:30px 0;
+    ul{
+        width:95%;
+        display:flex;
+        justify-content:conter;
+        // background:#fcc;
+        margin:0 auto;
+        li{
+            width:298px;
+            height:152px;
+            margin:0 2px;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+
+    }
+}
