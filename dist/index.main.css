@@ -27,11 +27,14 @@ input:focus {
     background: url(../img/a.png) no-repeat -272px -112px; }
 
 /*头部*/
+.top-wrap {
+  width: 100%;
+  border-bottom: 1px solid #eeeeee; }
+
 .top {
   width: 1200px;
   margin: 0 auto;
   height: 28px;
-  border-bottom: 1px solid #eeeeee;
   font-size: 12px;
   position: relative; }
 
@@ -110,18 +113,102 @@ header .seach .car {
   height: 44px;
   /* background: #fcc;*/ }
 
-.all {
-  display: inline-block;
-  width: 208px;
-  height: 44px;
-  background: #a12020;
-  font-size: 14px;
-  color: #fff;
-  margin-left: 32px;
-  padding-left: 11px;
-  line-height: 44px;
-  float: left;
-  position: relative; }
+#bannernav {
+  position: absolute;
+  left: -20px;
+  top: 44px;
+  display: block;
+  z-index: 90; }
+  #bannernav #twonav {
+    position: absolute;
+    left: 239px;
+    top: 0;
+    width: 790px;
+    height: 400px;
+    background: #fff;
+    z-index: 10;
+    border-top: 2px solid #000;
+    display: none;
+    padding: 15px 45px; }
+    #bannernav #twonav .top {
+      width: 790px;
+      border-bottom: 1px solid #eeeeee;
+      height: 55%; }
+      #bannernav #twonav .top p {
+        display: inline-block;
+        float: left;
+        text-align: left;
+        width: 120px;
+        height: 160px;
+        padding-left: 10px;
+        color: #c5bab4;
+        font-size: 12px;
+        line-height: 70px; }
+      #bannernav #twonav .top ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap; }
+        #bannernav #twonav .top ul li {
+          width: 120px;
+          height: 80px;
+          margin: 15px 18px;
+          text-align: center; }
+          #bannernav #twonav .top ul li a {
+            font-size: 12px;
+            color: #d7d7d7; }
+            #bannernav #twonav .top ul li a img {
+              width: 120px;
+              height: 48px;
+              margin-bottom: 4px; }
+          #bannernav #twonav .top ul li a:hover {
+            text-decoration: underline;
+            color: #000; }
+    #bannernav #twonav .bottom {
+      padding-top: 20px; }
+      #bannernav #twonav .bottom p {
+        display: inline-block;
+        float: left;
+        text-align: left;
+        width: 120px;
+        height: 160px;
+        padding-left: 10px;
+        color: #c5bab4;
+        font-size: 12px;
+        line-height: 40px; }
+      #bannernav #twonav .bottom ul {
+        width: 660px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        float: right; }
+        #bannernav #twonav .bottom ul li {
+          width: 58px;
+          margin: 9px 0;
+          border-right: 1px solid #d7d7d7;
+          text-align: center;
+          font-size: 12px; }
+          #bannernav #twonav .bottom ul li a {
+            color: #a2a2a2; }
+          #bannernav #twonav .bottom ul li a:hover {
+            text-decoration: underline;
+            color: #000; }
+  #bannernav li {
+    width: 219px;
+    height: 54px;
+    line-height: 52px; }
+    #bannernav li a {
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      margin-left: 12px; }
+  #bannernav li:nth-child(odd) {
+    background: #402d2d; }
+  #bannernav li:not(:nth-child(odd)) {
+    background: #332424; }
+  #bannernav li:hover {
+    background: #fff; }
+    #bannernav li:hover a {
+      color: #000; }
 
 .all span:nth-child(2) {
   position: absolute;
@@ -136,13 +223,25 @@ header .seach .car {
 
 .bnav {
   display: flex;
-  float: left;
-  margin-left: 30px; }
+  float: left; }
 
 .bnav li {
   margin: 0 20px;
   font: 13px/44px "宋体";
   font-weight: bold; }
+
+.bnav .all {
+  display: inline-block;
+  width: 208px;
+  height: 44px;
+  background: #a12020;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 0;
+  padding-left: 11px;
+  line-height: 44px;
+  float: left;
+  position: relative; }
 
 .bnav a {
   display: inline-block;
@@ -166,7 +265,10 @@ header .seach .car {
   75% {
     -webkit-transform: translateY(-3px); } }
 
-#hot {
+.bnav .zhizhen {
+  position: relative; }
+
+.bnav .zhizhen #hot {
   position: absolute;
   left: 56px;
   top: 3px;
@@ -184,6 +286,9 @@ header .seach .car {
 .bnav li a:hover {
   border-bottom: 4px solid #a12020; }
 
+.bnav #bannernav a:hover {
+  border-bottom: none; }
+
 .last {
   width: 100%;
   margin-top: 35px;
@@ -192,6 +297,18 @@ header .seach .car {
     width: 1200px;
     height: 70px;
     margin: 0 auto; }
+
+@-webkit-keyframes contai {
+  0% {
+    -webkit-transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1); } }
+
+@keyframes contai {
+  0% {
+    -webkit-transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1); } }
 
 .container {
   width: 100%;
@@ -203,7 +320,9 @@ header .seach .car {
     display: block; }
     .container ul li img {
       width: 100%;
-      height: 432px; }
+      height: 432px;
+      -webkit-animation: 2s linear 1;
+      animation: contai 2s linear 1; }
   .container ol {
     display: flex;
     position: absolute;
@@ -223,123 +342,32 @@ header .seach .car {
     line-height: 90px;
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    left: 254px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translateX(-380px);
+    -moz-transform: translateX(-380px);
     display: none; }
   .container #ltBnt {
     background: url(../img/a.png) no-repeat -304px -76px; }
   .container #rtBtn {
     background: url(../img/a.png) no-repeat -372px 0;
-    right: 10px;
+    right: 50%;
+    -webkit-transform: translateX(500px);
+    -moz-transform: translateX(500px);
     left: auto; }
   .container #ltBnt:hover {
     background: url(../img/a.png) no-repeat -372px -100px; }
   .container #rtBtn:hover {
     background: url(../img/a.png) no-repeat -304px -176px; }
-  .container #bannernav {
-    position: absolute;
-    left: 64px;
-    top: 0;
-    display: block; }
-    .container #bannernav li {
-      width: 219px;
-      height: 54px;
-      line-height: 52px; }
-      .container #bannernav li a {
-        font-size: 12px;
-        font-weight: bold;
-        color: #fff;
-        margin-left: 12px; }
-    .container #bannernav li:nth-child(odd) {
-      background: #402d2d; }
-    .container #bannernav li:not(:nth-child(odd)) {
-      background: #332424; }
-    .container #bannernav li:hover {
-      background: #fff; }
-      .container #bannernav li:hover a {
-        color: #000; }
-  .container #twonav {
-    position: absolute;
-    left: 283px;
-    top: 0;
-    width: 790px;
-    height: 432px;
-    background: #fff;
-    z-index: 10;
-    border-top: 2px solid #000;
-    display: block;
-    padding: 15px 45px; }
-    .container #twonav .top {
-      border-bottom: 1px solid #eeeeee;
-      height: 55%; }
-      .container #twonav .top p {
-        display: inline-block;
-        float: left;
-        text-align: left;
-        width: 120px;
-        height: 160px;
-        padding-left: 10px;
-        color: #c5bab4;
-        font-size: 12px;
-        line-height: 70px; }
-      .container #twonav .top ul {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap; }
-        .container #twonav .top ul li {
-          width: 120px;
-          height: 80px;
-          margin: 15px 18px;
-          text-align: center; }
-          .container #twonav .top ul li a {
-            font-size: 12px;
-            color: #d7d7d7; }
-            .container #twonav .top ul li a img {
-              width: 120px;
-              height: 48px;
-              margin-bottom: 4px; }
-          .container #twonav .top ul li a:hover {
-            text-decoration: underline;
-            color: #000; }
-    .container #twonav .bottom {
-      padding-top: 20px; }
-      .container #twonav .bottom p {
-        display: inline-block;
-        float: left;
-        text-align: left;
-        width: 120px;
-        height: 160px;
-        padding-left: 10px;
-        color: #c5bab4;
-        font-size: 12px;
-        line-height: 40px; }
-      .container #twonav .bottom ul {
-        width: 660px;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        float: right; }
-        .container #twonav .bottom ul li {
-          width: 58px;
-          margin: 9px 0;
-          border-right: 1px solid #d7d7d7;
-          text-align: center;
-          font-size: 12px; }
-          .container #twonav .bottom ul li a {
-            color: #a2a2a2; }
-          .container #twonav .bottom ul li a:hover {
-            text-decoration: underline;
-            color: #000; }
 
 .banbottom {
-  width: 1200px;
+  width: 100%;
   height: 56px;
   border-bottom: 1px solid #e5e5e5;
   margin: 0 auto; }
   .banbottom ul {
-    margin: 0px 32px;
+    width: 1200px;
+    margin: 0px auto;
     display: flex;
     justify-content: space-around;
     color: #666679;
@@ -351,7 +379,7 @@ header .seach .car {
       line-height: 56px;
       text-align: center; }
       .banbottom ul li span {
-        font-size: 18px;
+        font-size: 19px;
         line-height: 22px;
         margin-right: 5px; }
     .banbottom ul li:nth-child(1) span {
@@ -380,7 +408,7 @@ header .seach .car {
   margin-top: 30px;
   overflow: hidden; }
   .three-ban .left-pic {
-    width: 33.4%;
+    width: 402px;
     float: left; }
     .three-ban .left-pic a {
       display: block;
@@ -390,19 +418,20 @@ header .seach .car {
       background: url(../img/b.jpg) no-repeat;
       background-size: 100% 100%; }
   .three-ban .right-pic {
-    width: 66.6%;
+    width: 790px;
+    height: 186px;
     float: left;
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
     .three-ban .right-pic a {
-      width: 49.7%;
+      width: 392px;
       height: 186px;
       border: 1px solid #dddddd; }
       .three-ban .right-pic a span {
         display: block;
-        margin-top: 13%;
-        margin-left: 10%;
+        margin-top: 50px;
+        margin-left: 50px;
         font-size: 16px;
         line-height: 26px;
         color: #666666;

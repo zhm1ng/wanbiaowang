@@ -2,12 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-
         <title>Document</title>
         <link rel="stylesheet" href="dist/index.main.css">
-        <!-- <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css"/> -->
 
         <script type="text/javascript" src="src/js/jquery-1.11.3.js" ></script>
         <script src="src/js/slider.js"></script>
@@ -19,30 +15,30 @@
             // console.info(s);
           }
 
-         //  $(function(){
-         //        $.getJSON("src/js/twonav.json",function(json){
-         //        $.each(json,function(l){
-         //        //console.log(json[l].src);
-         //        var onenav = json[l];
-         //        var img = json[l].src;
-         //        var word = json[l].word;
-         //        var wordbot = json[l].wordbottom;
+           // $(function(){
+           //      $.getJSON("src/js/twonav.json",function(json){
+           //      $.each(json,function(l){
+           //      //console.log(json[l].src);
+           //      var onenav = json[l];
+           //      var img = json[l].src;
+           //      var word = json[l].word;
+           //      var wordbot = json[l].wordbottom;
 
-         //        $.each(img,function(j){
-         //            console.log(img[j]);
-         //            //alert(img[1]);
-         //            $("<li><a href=''><img src='img/" + img[j] + "'/>"+word[j]+"</a></li>").appendTo($("#topnav"));
-         //        })
-         //        $.each(wordbot,function(i){
-         //            //alert(wordbot[1]);
-         //            $("<li><a href=''>"+ wordbot[i] + "</a></li>").appendTo($("#bottomnav"));
-         //        })
+           //      $.each(img,function(j){
+           //          console.log(img[j]);
+           //          //alert(img[1]);
+           //          $("<li><a href=''><img src='img/" + img[j] + "'/>"+word[j]+"</a></li>").appendTo($("#topnav"));
+           //      })
+           //      $.each(wordbot,function(i){
+           //          //alert(wordbot[1]);
+           //          $("<li><a href=''>"+ wordbot[i] + "</a></li>").appendTo($("#bottomnav"));
+           //      })
 
-         //        })
-         //        })
+           //      })
+           //      })
          // })
 
-         $(function(){
+          $(function(){
              $.getJSON("src/js/twonav.json",function(json){
                 $.each(json,function(attr){
                     var oul = document.createElement("ul");
@@ -74,7 +70,7 @@
                     $("#twonav").append($(".bottom"));
 
                 })
-                //$(".container ").css("display","none");
+                $("#twonav ul").css("display","none");
              })
 
                $("#bannernav li,#twonav").mouseenter(function(){
@@ -98,15 +94,17 @@
     <span></span>
     </div>
     <!-- 头部 -->
+    <div class="top-wrap">
     <div class="top">
     <a href="" class="one">买手表，上万表</a>
     <ul class="snav">
     <li><a href="" class="red">登录享优惠</a><a href="">注册</a></li>
     <li><a href="">我的订单</a></li>
     <li><a href="">会员俱乐部</a></li>
-    <li><a href="" class="red">万表APP</a><a href="">办理信用卡</a><a href="">服务专线</a></li>
+    <li><a href="" class="red app">万表APP<span></span></a><a href="">办理信用卡</a><a href="">服务专线</a></li>
     <li><a href="">ENGLISH</a></li>
     </ul>
+    </div>
     </div>
 
     <!-- logo -->
@@ -124,14 +122,43 @@
 
     <!-- nav -->
     <div class="nav">
-    <a href="" class="all">
-    <span>全部商品
-    </span>
-    <span></span>
-    </a>
+
     <ul class="bnav">
+    <li class="all">
+    <span>全部商品</span>
+    <span></span>
+    <ul id="bannernav">
+        <li><a href="">顶级品牌</a></li>
+        <li><a href="">奢华品牌</a></li>
+        <li><a href="">高级品牌</a></li>
+        <li><a href="">轻奢时尚</a></li>
+        <li><a href="">年轻潮牌</a></li>
+        <li><a href="">国产智能</a></li>
+        <li><a href="">表带</a></li>
+        <li><a href="">维修保养</a></li>
+       <div id="twonav">
+       <div class="top">
+       <p>精品推荐></p>
+       <!-- <ul id="topnav">
+            <li><a href=""><img src="img/twonav1.png" alt="">aaa</a></li>
+       </ul> -->
+       </div>
+
+       <div class="bottom">
+       <p>精品推荐></p>
+       <!-- <ul id="bottomnav">
+            <li><a href="">111</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">222</a></li>
+       </ul> -->
+       </div>
+       </div>
+    </ul>
+    </li>
     <li><a href="">首页</a></li>
-    <li><a href="">选表中心<span id="hot"></span></a></li>
+    <li><a href="" class="zhizhen">选表中心<span id="hot"></span></a></li>
     <li><a href="">品牌馆</a></li>
     <li><a href="">闪购</a></li>
     <li><a href="">线下体验</a></li>
@@ -154,37 +181,7 @@
     <li><img src="img/banner2.jpg" alt=""></li>
     </ul>
 
-    <ul id="bannernav">
-        <li><a href="">顶级品牌</a></li>
-        <li><a href="">奢华品牌</a></li>
-        <li><a href="">高级品牌</a></li>
-        <li><a href="">轻奢时尚</a></li>
-        <li><a href="">年轻潮牌</a></li>
-        <li><a href="">国产智能</a></li>
-        <li><a href="">表带</a></li>
-        <li><a href="">维修保养</a></li>
-    </ul>
-    <div id="twonav">
-       <div class="top">
-       <p>精品推荐></p>
-       <!-- <ul id="topnav">
-            <li><a href=""><img src="img/twonav1.png" alt="">aaa</a></li>
-       </ul> -->
-       </div>
-
-       <div class="bottom">
-       <p>精品推荐></p>
-       <!-- <ul id="bottomnav">
-            <li><a href="">111</a></li>
-            <li><a href="">222</a></li>
-            <li><a href="">222</a></li>
-            <li><a href="">222</a></li>
-            <li><a href="">222</a></li>
-       </ul> -->
-       </div>
-
     </div>
-</div>
 
     <div class="banbottom">
     <ul>

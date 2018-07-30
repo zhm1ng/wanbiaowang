@@ -32,11 +32,16 @@ input:focus{
 
 }
 /*头部*/
+.top-wrap{
+    width:100%;
+    border-bottom:1px solid #eeeeee;
+
+}
 .top{
     width:1200px;
     margin:0 auto;
     height: 28px;
-    border-bottom:1px solid #eeeeee;
+
     font-size: 12px;
     position:relative;
 }
@@ -121,19 +126,137 @@ header .seach .car{
    /* background: #fcc;*/
 }
 
-.all{
-    display: inline-block;
-    width:208px;
-    height: 44px;
-    background:#a12020;
-    font-size:14px;
-    color:#fff;
-    margin-left:32px;
-    padding-left:11px;
-    line-height: 44px;
-    float: left;
-    position: relative;
-}
+
+ #bannernav{
+        position:absolute;
+        left:-20px;
+        top:44px;
+        display:block;
+        z-index:90;
+
+    #twonav{
+        position:absolute;
+        left:239px;
+        top:0;
+        width:790px;
+        height:400px;
+        background:#fff;
+        z-index:10;
+        border-top:2px solid #000;
+        display:none;
+        padding:15px 45px;
+            .top{
+                width:790px;
+                border-bottom:1px solid #eeeeee;
+                height:55%;
+                p{
+                    display: inline-block;
+                    float:left;
+                    text-align:left;
+                    width:120px;
+                    height:160px;
+                    padding-left:10px;
+                    color:#c5bab4;
+                    font-size:12px;
+                    line-height:70px;
+                    }
+                   ul{
+                    display:flex;
+                    justify-content:flex-start;
+                    flex-wrap:wrap;
+                    li{
+                        width:120px;
+                        height:80px;
+                        margin:15px 18px;
+                        // background:#fcc;
+                        text-align:center;
+                        a{
+                            font-size:12px;
+                            color:#d7d7d7;
+                            img{
+                            width:120px;
+                            height:48px;
+                            margin-bottom:4px;
+                            }
+                        }
+                        a:hover{
+                            text-decoration:underline;
+                            color:#000;
+                        }
+                    }
+
+                }
+
+
+            }
+
+
+            .bottom{
+
+                padding-top:20px;
+
+                p{
+                    display: inline-block;
+                    float:left;
+                    text-align:left;
+                    width:120px;
+                    height:160px;
+                    padding-left:10px;
+                    color:#c5bab4;
+                    font-size:12px;
+                    line-height:40px;
+
+                }
+                ul{
+                    width:660px;
+                    display:flex;
+                    justify-content:flex-start;
+                    flex-wrap:wrap;
+                    float:right;
+                    li{
+                    width: 58px;
+                    margin:9px 0;
+                    border-right:1px solid #d7d7d7;
+                    text-align: center;
+                    font-size:12px;
+                        a{
+                            color:#a2a2a2;
+                        }
+                        a:hover{
+                        text-decoration:underline;
+                        color:#000;
+                        }
+                    }
+                }
+
+            }
+            }
+        li{
+            width:219px;
+            height:54px;
+            line-height:52px;
+            // border-bottom:1px solid #333;
+            a{
+                font-size:12px;
+                font-weight:bold;
+                color:#fff;
+                margin-left:12px;
+            }
+        }
+        li:nth-child(odd){
+            background:#402d2d ;
+        }
+        li:not(:nth-child(odd)){
+            background:#332424;
+        }
+        li:hover{
+            background:#fff;
+            a{
+              color:#000;
+            }
+        }
+    }
+
 .all span:nth-child(2){
     position: absolute;
     left: 190px;
@@ -151,13 +274,26 @@ header .seach .car{
 .bnav{
     display: flex;
     float: left;
-    margin-left:30px;
+    //margin-left:30px;
 }
 .bnav li{
     margin:0 20px;
     font:13px/44px "宋体";
     font-weight: bold;
 
+}
+.bnav .all{
+    display: inline-block;
+    width:208px;
+    height: 44px;
+    background:#a12020;
+    font-size:14px;
+    color:#fff;
+    margin-left:0;
+    padding-left:11px;
+    line-height: 44px;
+    float: left;
+    position: relative;
 }
 .bnav a{
   display: inline-block;
@@ -176,7 +312,10 @@ header .seach .car{
   50%, 100% {-webkit-transform: translateY(0);}
   75% {-webkit-transform: translateY(-3px);}
  }
-#hot{
+.bnav .zhizhen{
+    position: relative;
+}
+.bnav .zhizhen #hot{
     position: absolute;
     left: 56px;
     top: 3px;
@@ -194,6 +333,12 @@ header .seach .car{
 .bnav li a:hover{
     border-bottom:4px solid #a12020;
 }
+.bnav #bannernav a:hover{
+    border-bottom:none;
+}
+
+
+
  .last{
         width:100%;
         margin-top:35px;
