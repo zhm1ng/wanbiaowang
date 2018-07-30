@@ -73,6 +73,41 @@ input:focus{
 .snav .red{
     color:#b92a4d;
 }
+.app {
+    position:relative;
+    span{
+    position:absolute;
+    top:22px;
+    left:-160px;
+    z-index:5;
+    width:220px;
+    height:215px;
+    background:#fff;
+    border:1px solid #999999;
+    display:none;
+
+    img{
+        display:block;
+        margin:30px auto;
+    }
+    p{
+        //display:block;
+        background:#f1f1f1;
+        line-height:30px;
+        height:30px;
+        b{
+            font-weight:normal;
+            color:#999999;
+        }
+        b:nth-child(1){
+            margin:0 30px;
+        }
+        b:nth-child(2){
+            margin:0 10px;
+        }
+    }
+}
+}
 .snav li a:hover {
     color:#000;
 }
@@ -133,8 +168,32 @@ header .seach .car{
         top:44px;
         display:block;
         z-index:90;
+        li{
+            width:219px;
+            height:54px;
+            line-height:52px;
+            // border-bottom:1px solid #333;
+            a{
+                font-size:12px;
+                font-weight:bold;
+                color:#fff;
+                margin-left:12px;
+            }
+        }
+        li:nth-child(odd){
+            background:#402d2d ;
+        }
+        li:not(:nth-child(odd)){
+            background:#332424;
+        }
+        li:hover{
+            background:#fff;
+            a{
+              color:#000;
+            }
+        }
 
-    #twonav{
+        #twonav{
         position:absolute;
         left:239px;
         top:0;
@@ -145,10 +204,18 @@ header .seach .car{
         border-top:2px solid #000;
         display:none;
         padding:15px 45px;
+                li{
+                    background:none;
+                    line-height:0;
+                    a{
+                        margin-left:0;
+                    }
+                }
             .top{
                 width:790px;
                 border-bottom:1px solid #eeeeee;
                 height:55%;
+
                 p{
                     display: inline-block;
                     float:left;
@@ -213,12 +280,16 @@ header .seach .car{
                     justify-content:flex-start;
                     flex-wrap:wrap;
                     float:right;
+                    margin-top:-5px;
                     li{
                     width: 58px;
+                    height:18px;
                     margin:9px 0;
                     border-right:1px solid #d7d7d7;
                     text-align: center;
                     font-size:12px;
+                    line-height:18px;
+
                         a{
                             color:#a2a2a2;
                         }
@@ -231,30 +302,6 @@ header .seach .car{
 
             }
             }
-        li{
-            width:219px;
-            height:54px;
-            line-height:52px;
-            // border-bottom:1px solid #333;
-            a{
-                font-size:12px;
-                font-weight:bold;
-                color:#fff;
-                margin-left:12px;
-            }
-        }
-        li:nth-child(odd){
-            background:#402d2d ;
-        }
-        li:not(:nth-child(odd)){
-            background:#332424;
-        }
-        li:hover{
-            background:#fff;
-            a{
-              color:#000;
-            }
-        }
     }
 
 .all span:nth-child(2){

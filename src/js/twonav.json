@@ -7,6 +7,36 @@
     "navtwo":{
             "src":["twonav9.png","twonav10.png","twonav11.png","twonav12.png","twonav13.png","twonav14.png","twonav15.png"],
             "word":["爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["浪琴","天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+    },
+     "navthree":{
+            "src":["twonav16.png","twonav17.png","twonav18.png","twonav19.png","twonav20.png"],
+            "word":["天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+    },
+     "navfour":{
+            "src":["twonav9.png","twonav10.png","twonav11.png","twonav12.png","twonav13.png","twonav14.png","twonav15.png"],
+            "word":["爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["伯爵","爱彼","浪琴","天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+    },
+     "navfive":{
+            "src":["twonav9.png","twonav10.png","twonav11.png","twonav12.png","twonav13.png","twonav14.png","twonav15.png"],
+            "word":["爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["伯爵","爱彼","浪琴","天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+    },
+     "navsix":{
+            "src":["twonav9.png","twonav10.png","twonav11.png","twonav12.png","twonav13.png","twonav14.png","twonav15.png"],
+            "word":["爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["伯爵","爱彼","浪琴","天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+    },
+     "navseven":{
+            "src":["twonav9.png","twonav10.png","twonav11.png","twonav12.png","twonav13.png","twonav14.png","twonav15.png"],
+            "word":["爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["伯爵","爱彼","浪琴","天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+    },
+     "naveight":{
+            "src":["twonav9.png","twonav10.png","twonav11.png","twonav12.png","twonav13.png","twonav14.png","twonav15.png"],
+            "word":["爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
             "wordbottom":["伯爵","爱彼","浪琴","天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
     }
 

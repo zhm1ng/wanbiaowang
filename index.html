@@ -41,44 +41,47 @@
           $(function(){
              $.getJSON("src/js/twonav.json",function(json){
                 $.each(json,function(attr){
+                    //console.log(json[attr]);
                     var oul = document.createElement("ul");
-                    //var $ul = $("<ul></ul>");
-                    //alert($ul);
-                    // for(var i = 0 ;i<json[attr].src.length;i++){
-                    //     var arr = [];
-                    //  arr.push( $("<li><a href=''><img src='img/" + json[attr].src[i] + "'/>"+json[attr].word[i]+"</a></li>"));
-                    //   //console.log(arr);
-                    // }
+                    //console.log(oul);
                     for(var j = 0 ;j<json[attr].wordbottom.length;j++){
-                      //var $listwo = $("<li><a href=''>"+ json[attr].wordbottom[j] + "</a></li>").appendTo($($ul));
-                      //$("#bottomnav")appendTo($("#twonav"));
                       var ali = document.createElement("li");
                       var as = document.createElement("a");
                       as.innerHTML = json[attr].wordbottom[j];
                       //console.log(as);
                       ali.append(as);
                       oul.append(ali);
-
                     }
-                    //var div2 = document.createElement("div");
-                    $(".bottom").append(oul);
-                    //$(div2).addClass("bottom");
-                    //var odiv = document.createElement("div");
-                    //alert($(odiv));
-                    //$(odiv).append(div2);
-                    //$(odiv).addClass("twonav");
-                    $("#twonav").append($(".bottom"));
+                    var odiv = document.createElement("div");
+                    $(odiv).append(oul);
+                    $(odiv).addClass("bottom");
+                    //$("#twonav").append(odiv);
+                    //$("#bannernav").append($("#twonav"));
 
                 })
-                $("#twonav ul").css("display","none");
+                $("#twonav odiv").css("display","none");
              })
 
-               $("#bannernav li,#twonav").mouseenter(function(){
+               $("#bannernav>li,#twonav").mouseenter(function(){
                     $("#twonav").show();
-                $("#bannernav li,#twonav").mouseleave(function(){
+                $("#bannernav>li,#twonav").mouseleave(function(){
                     $("#twonav").hide();
                 })
             })
+
+               $(".app").mouseenter(function(){
+                $(".app span").animate({"height":"215px"},700,function(){
+                    $(".app span p b").mousemove(function(){
+                        $(this).css("color","#000");
+                    })
+
+                })
+
+                $(".app span ").mouseleave(function(){
+                    $(".app span").css("display","none");
+                })
+               })
+
 
          })
 
@@ -101,7 +104,18 @@
     <li><a href="" class="red">登录享优惠</a><a href="">注册</a></li>
     <li><a href="">我的订单</a></li>
     <li><a href="">会员俱乐部</a></li>
-    <li><a href="" class="red app">万表APP<span></span></a><a href="">办理信用卡</a><a href="">服务专线</a></li>
+    <li><a href="" class="red app">万表APP
+    <span>
+        <img src="img/code1.jpg" alt="">
+        <p>
+            <b>万表APP</b>
+            <b>万表微信服务号</b>
+        </p>
+    </span>
+    </a>
+    <a href="">办理信用卡</a>
+    <a href="">服务专线</a>
+    </li>
     <li><a href="">ENGLISH</a></li>
     </ul>
     </div>
@@ -139,9 +153,9 @@
        <div id="twonav">
        <div class="top">
        <p>精品推荐></p>
-       <!-- <ul id="topnav">
+       <ul id="topnav">
             <li><a href=""><img src="img/twonav1.png" alt="">aaa</a></li>
-       </ul> -->
+       </ul>
        </div>
 
        <div class="bottom">

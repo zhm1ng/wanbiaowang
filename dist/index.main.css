@@ -65,6 +65,33 @@ input:focus {
 .snav .red {
   color: #b92a4d; }
 
+.app {
+  position: relative; }
+  .app span {
+    position: absolute;
+    top: 22px;
+    left: -160px;
+    z-index: 5;
+    width: 220px;
+    height: 215px;
+    background: #fff;
+    border: 1px solid #999999;
+    display: none; }
+    .app span img {
+      display: block;
+      margin: 30px auto; }
+    .app span p {
+      background: #f1f1f1;
+      line-height: 30px;
+      height: 30px; }
+      .app span p b {
+        font-weight: normal;
+        color: #999999; }
+      .app span p b:nth-child(1) {
+        margin: 0 30px; }
+      .app span p b:nth-child(2) {
+        margin: 0 10px; }
+
 .snav li a:hover {
   color: #000; }
 
@@ -119,6 +146,23 @@ header .seach .car {
   top: 44px;
   display: block;
   z-index: 90; }
+  #bannernav li {
+    width: 219px;
+    height: 54px;
+    line-height: 52px; }
+    #bannernav li a {
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      margin-left: 12px; }
+  #bannernav li:nth-child(odd) {
+    background: #402d2d; }
+  #bannernav li:not(:nth-child(odd)) {
+    background: #332424; }
+  #bannernav li:hover {
+    background: #fff; }
+    #bannernav li:hover a {
+      color: #000; }
   #bannernav #twonav {
     position: absolute;
     left: 239px;
@@ -130,6 +174,11 @@ header .seach .car {
     border-top: 2px solid #000;
     display: none;
     padding: 15px 45px; }
+    #bannernav #twonav li {
+      background: none;
+      line-height: 0; }
+      #bannernav #twonav li a {
+        margin-left: 0; }
     #bannernav #twonav .top {
       width: 790px;
       border-bottom: 1px solid #eeeeee;
@@ -180,35 +229,21 @@ header .seach .car {
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        float: right; }
+        float: right;
+        margin-top: -5px; }
         #bannernav #twonav .bottom ul li {
           width: 58px;
+          height: 18px;
           margin: 9px 0;
           border-right: 1px solid #d7d7d7;
           text-align: center;
-          font-size: 12px; }
+          font-size: 12px;
+          line-height: 18px; }
           #bannernav #twonav .bottom ul li a {
             color: #a2a2a2; }
           #bannernav #twonav .bottom ul li a:hover {
             text-decoration: underline;
             color: #000; }
-  #bannernav li {
-    width: 219px;
-    height: 54px;
-    line-height: 52px; }
-    #bannernav li a {
-      font-size: 12px;
-      font-weight: bold;
-      color: #fff;
-      margin-left: 12px; }
-  #bannernav li:nth-child(odd) {
-    background: #402d2d; }
-  #bannernav li:not(:nth-child(odd)) {
-    background: #332424; }
-  #bannernav li:hover {
-    background: #fff; }
-    #bannernav li:hover a {
-      color: #000; }
 
 .all span:nth-child(2) {
   position: absolute;
