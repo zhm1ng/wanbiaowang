@@ -1,0 +1,13 @@
+{
+    "navone":{
+            "src":["twonav1.png","twonav2.png","twonav3.png","twonav4.png","twonav5.png","twonav6.png","twonav7.png","twonav8.png"],
+            "word":["伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+            },
+    "navtwo":{
+            "src":["twonav9.png","twonav10.png","twonav11.png","twonav12.png","twonav13.png","twonav14.png","twonav15.png"],
+            "word":["爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"],
+            "wordbottom":["伯爵","爱彼","浪琴","天梭","卡西欧","伯爵","爱彼","浪琴","天梭","卡西欧","海鸥","美度","万国"]
+    }
+
+}

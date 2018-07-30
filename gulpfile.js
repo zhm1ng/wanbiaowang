@@ -6,7 +6,7 @@ var cssnano = require('gulp-cssnano');
 //发布任务
 gulp.task('sass',function(){
     gulp.src('./src/sass/*.scss').pipe(sass()).pipe(rename({"suffix":".main"}))
-    .pipe(cssnano())
+    //.pipe(cssnano())
     .pipe(gulp.dest('./dist'));
 })
 gulp.task('default',function(){

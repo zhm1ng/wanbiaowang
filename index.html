@@ -2,22 +2,101 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
         <title>Document</title>
         <link rel="stylesheet" href="dist/index.main.css">
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css"/> -->
+
         <script type="text/javascript" src="src/js/jquery-1.11.3.js" ></script>
-        <!-- <script type="text/javascript" src="jquery-1.8.3.js"></script> -->
         <script src="src/js/slider.js"></script>
         <script src="src/js/tool.js"></script>
         <script src="src/js/index.js"></script>
         <script type="text/javascript">
          window.onload = function(){
             var s = new Slider("slide1");
-            console.info(s);
+            // console.info(s);
           }
+
+         //  $(function(){
+         //        $.getJSON("src/js/twonav.json",function(json){
+         //        $.each(json,function(l){
+         //        //console.log(json[l].src);
+         //        var onenav = json[l];
+         //        var img = json[l].src;
+         //        var word = json[l].word;
+         //        var wordbot = json[l].wordbottom;
+
+         //        $.each(img,function(j){
+         //            console.log(img[j]);
+         //            //alert(img[1]);
+         //            $("<li><a href=''><img src='img/" + img[j] + "'/>"+word[j]+"</a></li>").appendTo($("#topnav"));
+         //        })
+         //        $.each(wordbot,function(i){
+         //            //alert(wordbot[1]);
+         //            $("<li><a href=''>"+ wordbot[i] + "</a></li>").appendTo($("#bottomnav"));
+         //        })
+
+         //        })
+         //        })
+         // })
+
+         $(function(){
+             $.getJSON("src/js/twonav.json",function(json){
+                $.each(json,function(attr){
+                    var oul = document.createElement("ul");
+                    //var $ul = $("<ul></ul>");
+                    //alert($ul);
+                    // for(var i = 0 ;i<json[attr].src.length;i++){
+                    //     var arr = [];
+                    //  arr.push( $("<li><a href=''><img src='img/" + json[attr].src[i] + "'/>"+json[attr].word[i]+"</a></li>"));
+                    //   //console.log(arr);
+                    // }
+                    for(var j = 0 ;j<json[attr].wordbottom.length;j++){
+                      //var $listwo = $("<li><a href=''>"+ json[attr].wordbottom[j] + "</a></li>").appendTo($($ul));
+                      //$("#bottomnav")appendTo($("#twonav"));
+                      var ali = document.createElement("li");
+                      var as = document.createElement("a");
+                      as.innerHTML = json[attr].wordbottom[j];
+                      //console.log(as);
+                      ali.append(as);
+                      oul.append(ali);
+
+                    }
+                    //var div2 = document.createElement("div");
+                    $(".bottom").append(oul);
+                    //$(div2).addClass("bottom");
+                    //var odiv = document.createElement("div");
+                    //alert($(odiv));
+                    //$(odiv).append(div2);
+                    //$(odiv).addClass("twonav");
+                    $("#twonav").append($(".bottom"));
+
+                })
+                //$(".container ").css("display","none");
+             })
+
+               $("#bannernav li,#twonav").mouseenter(function(){
+                    $("#twonav").show();
+                $("#bannernav li,#twonav").mouseleave(function(){
+                    $("#twonav").hide();
+                })
+            })
+
+         })
+
+
+
+
         </script>
 
     </head>
     <body>
+    <div class="clear">
+    <img src="img/top.jpg" alt="">
+    <span></span>
+    </div>
     <!-- 头部 -->
     <div class="top">
     <a href="" class="one">买手表，上万表</a>
@@ -46,7 +125,8 @@
     <!-- nav -->
     <div class="nav">
     <a href="" class="all">
-    <span>全部商品</span>
+    <span>全部商品
+    </span>
     <span></span>
     </a>
     <ul class="bnav">
@@ -85,10 +165,26 @@
         <li><a href="">维修保养</a></li>
     </ul>
     <div id="twonav">
-       <!--  二级菜单 -->
+       <div class="top">
+       <p>精品推荐></p>
+       <!-- <ul id="topnav">
+            <li><a href=""><img src="img/twonav1.png" alt="">aaa</a></li>
+       </ul> -->
+       </div>
+
+       <div class="bottom">
+       <p>精品推荐></p>
+       <!-- <ul id="bottomnav">
+            <li><a href="">111</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">222</a></li>
+            <li><a href="">222</a></li>
+       </ul> -->
+       </div>
 
     </div>
-    </div>
+</div>
 
     <div class="banbottom">
     <ul>
@@ -108,6 +204,95 @@
             <li><a href=""><img src="img/sban4.jpg" alt=""></a></li>
         </ul>
     </div>
+
+   <!--  广告图 -->
+    <div class="three-ban">
+        <div class="left-pic">
+            <a href=""></a>
+        </div>
+        <div class="right-pic">
+                <a href=""><span>法国优雅时尚腕表 赫柏林<p>一口价4080</p></span></a>
+                <a href=""><span>天梭力洛克<p>一口价3720 全网热销</p></span></a>
+                <a href=""><span>卡西欧CASIO<p>限时购！黑色炫酷，金色如梦</p></span></a>
+                <a href=""><span>欧米茄OMEGA<p>已售550，限量秒杀</p></span></a>
+        </div>
+    </div>
+    <div class="four-ban">
+        <a style="background:url(img/twonav2.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav3.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav4.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav5.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav6.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav7.png) no-repeat;" href=""></a>
+    </div>
+
+   <!--  热卖推荐 -->
+   <div class="hotsale">
+    <h2>热卖推荐</h2>
+    <ul>
+     <li><a href=""><img src="img/hotsale1.jpg" alt=""></img><span>只为拥有，给她初恋般的甜蜜<p>赫柏林恒星系列</p></span></a></li>
+     <li><a href=""><img src="img/hotsale2.jpg" alt=""></img><span>优雅风范与卓越性能相融合<p>浪琴名匠系列</p></span></a></li>
+     <li><a href=""><img src="img/hotsale3.jpg" alt=""></img><span>魏大勋同款，为挑战而生<p>精工系列</p></span></a></li>
+     <li><a href=""><img src="img/hotsale4.jpg" alt=""></img><span>限时赠送原装表带<p>诺美纳皇族系列</p></span></a></li>
+     <li><a href=""><img src="img/hotsale5.jpg" alt=""></img><span>简洁精致，逸士风范<p>美度贝伦赛丽系列</p></span></a></li>
+     <li><a href=""><img src="img/hotsale6.jpg" alt=""></img><span>航海领域的专业计时器<p>德国格拉苏蒂-经典系列</p></span></a></li>
+    </ul>
+   </div>
+
+   <!-- 广告图 -->
+    <div class="five-ban">
+    <a style="background:url(img/banner4.jpg) no-repeat" href=""></a>
+    <ul>
+        <li><a href=""><img src="img/biao1.jpg" alt=""></img><span>018年巴塞尔新款 <p>瑞士艾美达</p></span></a></li>
+        <li><a href=""><img src="img/biao2.jpg" alt=""></img><span>散发迷人气味，成为焦点 <p>欧米茄OMEGA</p></span></a></li>
+        <li><a href=""><img src="img/biao3.jpg" alt=""></img><span>打造男士独特魅力 <p>天梭</p></span></a></li>
+        <li><a href=""><img src="img/biao4.jpg" alt=""></img><span>点缀腕间，为整体造型加分 <p>迪沃斯</p></span></a></li>
+    </ul>
+
+    </div>
+
+   <!--  人气店铺-->
+    <div class="hotshop">
+    <h2>人气店铺</h2>
+    <ul>
+     <li><a href=""><img src="img/shop1.jpg" alt=""></img><span>只为拥有，给她初恋般的甜蜜</span></a></li>
+     <li><a href=""><img src="img/shop2.jpg" alt=""></img><span>优雅风范与卓越性能相融合</span></a></li>
+     <li><a href=""><img src="img/shop3.jpg" alt=""></img><span>魏大勋同款，为挑战而生</span></a></li>
+     <li><a href=""><img src="img/shop4.jpg" alt=""></img><span>限时赠送原装表带</span></a></li>
+    </ul>
+    </div>
+
+  <!--   品牌名 -->
+    <div class="four-ban">
+        <a style="background:url(img/twonav8.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav9.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav10.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav11.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav12.png) no-repeat;" href=""></a>
+        <a style="background:url(img/twonav12.png) no-repeat;" href=""></a>
+    </div>
+
+    <!-- 晒单分享 -->
+    <div class="share">
+    <h2>晒单分享</h2>
+     <ul>
+     <li><a href=""><span><img src="img/share1.jpg" alt=""></img></span><p>只为拥有，给她初恋般的甜蜜</p></a></li>
+     <li><a href=""><span><img src="img/share2.jpg" alt=""></img></span><p>优雅风范与卓越性能相融合</p></a></li>
+     <li><a href=""><span><img src="img/share3.png" alt=""></img></span><p>魏大勋同款，为挑战而生</p></a></li>
+     <li><a href=""><span><img src="img/share4.jpg" alt=""></img></span><p>限时赠送原装表带</p></a></li>
+    </ul>
+    </div>
+
+   <!--  最后 -->
+    <div class="last">
+    <img src="img/last.gif" alt="">
+    </div>
+
+    <footer>
+
+
+
+    </footer>
 
     </body>
 </html>

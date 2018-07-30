@@ -10,12 +10,35 @@ input:focus{
         outline: none;
 }
 
+.clear{
+    position: relative;
+    width:100%;
+    img{
+        width:100%;
+        height:100%
+    }
+    span{
+        position:absolute;
+        right:40px;
+        top:20px;
+        z-index:10;
+        background-color:#fcc;
+        display:block;
+        width:22px;
+        height:22px;
+        border-radius: 50%;
+        background: url(../img/a.png) no-repeat -272px -112px;
+    }
+
+}
 /*头部*/
 .top{
-    width:100%;
+    width:1200px;
+    margin:0 auto;
     height: 28px;
     border-bottom:1px solid #eeeeee;
     font-size: 12px;
+    position:relative;
 }
 .one{
     position: absolute;
@@ -52,13 +75,15 @@ input:focus{
 /*logo*/
 header{
     height: 115px;
-    width: 100%;
+    width: 1200px;
+    margin:0 auto;
+    position:relative;
     /*background: #fcc;*/
 }
 header a:first-child{
     position: absolute;
     left:65px;
-    top:40px;
+    top:20px;
 }
 
 header .seach{
@@ -90,7 +115,8 @@ header .seach .car{
 
 /*nav*/
 .nav {
-    width: 100%;
+    width: 1200px;
+    margin:0 auto;
     height:44px;
    /* background: #fcc;*/
 }
@@ -168,3 +194,14 @@ header .seach .car{
 .bnav li a:hover{
     border-bottom:4px solid #a12020;
 }
+ .last{
+        width:100%;
+        margin-top:35px;
+        border-top:1px solid #eeeeee;
+        img{
+            width:1200px;
+            height:70px;
+            margin:0 auto;
+        }
+    }
+

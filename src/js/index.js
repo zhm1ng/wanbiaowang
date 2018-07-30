@@ -1,11 +1,16 @@
     $(function(){
-        $("#bannernav li,#twonav").mouseenter(function(){
-            $("#twonav").show();
-        $("#bannernav li,#twonav").mouseleave(function(){
-            $("#twonav").hide();
-        })
-    })
+    //     $("#bannernav li,#twonav").mouseenter(function(){
+    //         $("#twonav").show();
+    //     $("#bannernav li,#twonav").mouseleave(function(){
+    //         $("#twonav").hide();
+    //     })
+    // })
+        $(".clear span").click(function(){
+            $(this).hide(function(){
+                 $(".clear").animate({'height':0},300);
+            });
 
+        })
         // $(".container img").each(function(){
         //     $(this).animate({transform: scale(1.6)},function(){
         //         // alert($(this));
